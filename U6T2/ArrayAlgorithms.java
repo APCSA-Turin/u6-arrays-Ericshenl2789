@@ -69,5 +69,75 @@ public class ArrayAlgorithms {
         return result;
     }
 
+    public static void bookEnd(int[] nums, int num) {
+        nums[0] = num;
+        nums[nums.length - 1] = num;
+    }
+  
+    public static void multiplyBy(int[] numList, int multiplier) {
+        for(int num = 0; num < numList.length; num ++){
+            numList[num] *= multiplier;
+        }
+    }    
 
+    public static int[] multiplyByNoModify(int[] numList, int multiplier) {
+        int[] result = new int[numList.length];
+        for(int i = 0; i < numList.length; i++){
+            result[i] = numList[i] * multiplier;
+        }
+        return result;
+    }    
+
+    public static void addExclamation(String[] wordList) {
+        for(int i = 0; i < wordList.length; i++){
+            String word = wordList[i];
+            String last = word.substring(word.length() - 1);
+            if(!last.equals("!")){
+                wordList[i] += "!";
+            }
+        }
+    }
+    
+    public static boolean[] isFreezing(int[] tempList) {
+        boolean[] result = new boolean[tempList.length];
+        for(int num  = 0; num < tempList.length; num++){
+            if(tempList[num] <= 32){
+                result[num] = true;
+            }
+        }
+        return result;
+    }
+    
+    public static void shiftLeft(int[] numList) {
+        int first = numList[0];
+        for(int i = 0; i < numList.length; i++){
+            if(i == numList.length - 1){
+                numList[i] = first;
+            }else{
+                numList[i] = numList[i+1];
+            }
+        }
+    }
+
+    public static void shiftRight(int[] numList) {
+        int last = numList[numList.length - 1];
+        for(int i = numList.length - 1; i >= 0; i--){
+            if(i == 0){
+                numList[i] = last;
+            }else{
+                numList[i] = numList[i-1];
+            }
+        }
+    }
+
+    public static void reverse(int[] numList) {
+        int k = numList.length - 1;
+        for(int i = 0; i < numList.length/2; i++){
+            int temp = numList[i];
+            numList[i] = numList[k];
+            numList[k] = temp;
+            k --;
+        }
+    }
+    
 }
