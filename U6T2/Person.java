@@ -15,6 +15,9 @@ public class Person {
     public int getAge() {
       return age;
     }
+    public void setName(String newName) {
+      name = newName;
+    }
   
     public void introduce() {
       System.out.println("My name is " + name + " and I am " + age + " years old");

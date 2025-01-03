@@ -88,6 +88,8 @@ public class ArrayAlgorithms {
         return result;
     }    
 
+
+
     public static void addExclamation(String[] wordList) {
         for(int i = 0; i < wordList.length; i++){
             String word = wordList[i];
@@ -139,5 +141,89 @@ public class ArrayAlgorithms {
             k --;
         }
     }
+     
+    public static String longestString(String[] array){
+        String max = "";
+        for(String string:array){
+            if(string.length() >= max.length()){
+                max = string;
+            }
+        }
+        return max;
+    }
+
+    public static boolean containsPositive(int[] array){
+        for(int num : array){
+            if(num > 0){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static String[] makeLowercase(String[] array){
+        String[] result = new String[array.length];
+        for(int i = 0; i < array.length; i++){
+            result[i] = array[i].toLowerCase();
+        }
+        return result;
+    }
+
+    public static int endsInExclamations(String[] stringList){
+        int result = 0;
+        for(String str: stringList){
+            String finalLetter = str.substring(str.length() - 1);
+            if(finalLetter.equals("!")){
+                result ++;
+            }
+        }
+        return result;
+    }
+
+    public static void makeUppercase(String[] wordList){
+        for(int i = 0; i < wordList.length; i ++){
+            wordList[i] = wordList[i].toUpperCase();
+        }
+    }
+    public static int[] arrayMaximums(int[] intArr1, int[] intArr2) {
+        int[] result = new int[intArr1.length];
+        for(int i = 0; i < intArr1.length; i++){
+            result[i] = intArr1[i];
+        }
+        for(int i =0; i <intArr2.length; i ++){
+            if(intArr2[i] > result[i]){
+                result[i] = intArr2[i];
+            }
+        }
+        return result;
+    }
+    public static int countConsecutiveDoubles(int[] numList) {
+        int result = 0;
+        for(int i = 0; i < numList.length - 1; i ++){
+            if(numList[i] == numList[i+1]){
+                result ++;
+            } 
+        }
+        return result;
+    }
+
+    public static int longestStreak(int[] nums) {
+        int streak = 0;
+        int maxStreak = 0;
+        int previous = nums[0];
+        for(int num : nums){
+            if(num == previous){
+                streak++;
+            } else {
+                streak = 1;
+            }
+            previous = num;
+            if(streak > maxStreak){
+                maxStreak = streak;
+            }
+        }
+        return maxStreak;
+    }
+    
     
 }

@@ -1,31 +1,22 @@
 public class Main {
     public static void main(String[] args) {    
+        int[] nums13 = {10, 20, 10, 30, 10, 20, 10, 30, 10, 20, 10, 30};
+    int streak1 = ArrayAlgorithms.longestStreak(nums13);
+    System.out.println(streak1);
+    int[] nums14 = {10, 10, 20, 20, 20, 30, 30, 30, 30, 40, 40, 50};
+    int streak2 = ArrayAlgorithms.longestStreak(nums14);
+    System.out.println(streak2);
+    int[] nums15 = {10, 10, 10, 10, 10, 10, 20, 20, 30, 30, 30, 30};
+    int streak3 = ArrayAlgorithms.longestStreak(nums15);
+    System.out.println(streak3);
+    int[] nums16 = {20, 20, 30, 30, 30, 30, 10, 10, 10, 10, 10, 10};
+    int streak4 = ArrayAlgorithms.longestStreak(nums16);
+    System.out.println(streak4);
+    int[] nums17 = {10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
+    int streak5 = ArrayAlgorithms.longestStreak(nums17);
+    System.out.println(streak5);
 
-        int[] even = {1, 2, 3, 4, 5, 6};
-        ArrayAlgorithms.reverse(even);
-        for (int i = 0; i < even.length; i++) {
-            System.out.print(even[i] + " ");
-        }
-        System.out.println();
-        int[] odd = {1, 2, 3, 4, 5, 6, 7};
-        ArrayAlgorithms.reverse(odd);
-        for (int i = 0; i < odd.length; i++) {
-            System.out.print(odd[i] + " ");
-        }
-        System.out.println();
-        int[] even2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
-        ArrayAlgorithms.reverse(even2);
-        for (int i = 0; i < even2.length; i++) {
-            System.out.print(even2[i] + " ");
-        }
-        System.out.println();
-        int[] odd2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
-        ArrayAlgorithms.reverse(odd2);
-        for (int i = 0; i < odd2.length; i++) {
-            System.out.print(odd2[i] + " ");
-        }
-        System.out.println();
-                  
+
     }
  }
  
